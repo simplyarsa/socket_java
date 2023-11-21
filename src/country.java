@@ -269,6 +269,17 @@ public class country {
         }
         return res;
     }
+
+    public String detectBadWord(String msg) {
+        String[] yourArray = {"badword", "bad", "idiot", "stupid", "fool"};
+        for (int i = 0; i <= yourArray.length - 1; i++) {
+
+            if (msg.contains(yourArray[i])) {
+                msg = msg.replace(yourArray[i], "****");
+            }
+        }
+        return msg;
+    }
     public static void main(String[] args) {
         System.out.println("This is country class");
     }    
